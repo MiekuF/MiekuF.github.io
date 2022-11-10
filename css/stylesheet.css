@@ -1,5 +1,28 @@
-#logo
+@media screen and (min-width: 1280px)
 {
-	height: 150px;
-	width: 150px;
+	#logo
+	{
+		height: 150px;
+		width: 150px;
+	}
+	.IndexPage
+	{
+		display: flex;
+	}
+}
+
+@media screen and (min-width:481px) and (max-width: 1279px)
+{
+	.IndexPage
+	{
+		display: flex;
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+	.IndexPage
+	{
+		display: flex;
+	}
 }
