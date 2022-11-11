@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
 
 #logo
 	{
 		height: 50px;
 		width: 50px;
+		background-color:#FFC72B;
 	}
 
 #IndexPage
 	{
-		background-color: pink;
-		font-family: Silkscreen;
+		background-color: #FFC0CB;
 		display: flex;
 		flex-flow: row wrap;
 		margin: 0;
@@ -17,18 +18,30 @@
 
 #ProductPage
 	{
-		background-color: pink;
-		font-family: Silkscreen;
+		background-color: #FFC0CB;
 		display: grid;
 		margin: 0;
-		
 	}
 
+#PricingPage
+	{
+		background-color: #FFC0CB;
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0;
+	}
+#ContactPage
+	{
+		background-color: #FFC0CB;
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0;
+	}
 
 #InformationMenu
 	{
-		background-color: black;
-		color: white;
+		background-color: #000000;
+		color: #FFFFFF;
 	}	
 	
 #InformationMenu h2
@@ -39,6 +52,9 @@
 #IntoVideo
 	{
 		flex-basis: 100%;
+		border-width:1px;
+		border-color:#fcba03;
+		border-style: double;
 	}
 	
 #CookieStatement
@@ -49,11 +65,12 @@
 		position: fixed;
 		background-color: #FA0;
 		opacity: 50%;
+		z-index:9999;
 	}
 .ProductPictures
 	{
 		padding: 8px;
-		max-width: 100%;
+		max-width: 100px;
 		height: auto;
 	}
 
@@ -62,15 +79,71 @@
 		padding: 8px;
 		max-width: 100%;
 		height: auto;
+		position: static;
 	}
+figcaption
+	{
+		font-size:9px;
+		text-transform: uppercase;
+		font-family:Notable;
+	}
+ficaption:first-letter
+	{
+		
+	}
+h6
+{
+	font-size:25px;
+	text-align:center;
+}	
+a:link 
+	{
+		color: #e66e65;
+	}
+
+a:visited 
+	{
+		color: #a6acff;
+	}
+
+a:hover 
+	{
+		color: #4c41e8;
+	}
+
+a:active 
+	{
+		color: #f2aab7;
+	}	
+
+#IndexPage, #ProductPage, #PricingPage, #ContactPage
+	{
+		font-family:"Silkscreen", "Arial", "Helvetica", "sans-serif";
+	}
+
 
 @media screen and (min-width: 1280px)
 {
 	#ProductPage
 		{
 			display: grid;
-			grid-template-columns: 33% 33% 33%;
-			grid-template-rows: 15;
+			grid-template-columns: 35% 35% 30%;
+			grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+			grid-template-areas:
+				"header header header"
+				"header header header"
+				"nav nav nav"
+				"ArtTwo ArtOne ArtThree"
+				"ArtTwo ArtOne ArtThree"
+				"ArtTwo ArtOne ArtThree"
+				"ArtTwo ArtOne ArtFour"
+				"ArtFive ArtOne ArtFour"
+				"ArtFive ArtOne ArtFour"
+				"ArtFive ArtSix ArtSix"
+				"PicOne PicTwo PicThree"
+				"PicOne PicTwo PicThree"
+				"AutorInfo AutorInfo Cookie"
+				"AutorInfo AutorInfo Cookie"
 		}
 	#dropdown
 		{
@@ -87,7 +160,9 @@
 			flex-basis: 100%;
 			padding: 20px;
 			order: 1;
+			grid-area: header;
 			grid-column:1/ span 3;
+			grid-row:1/span 3;
 		}
 		
 	nav
@@ -96,7 +171,9 @@
 			padding: 1em;
 			order: 2;
 			background-color: #333333;
+			grid-area: nav;
 			grid-column:1/ span 3;
+			grid-row:4/span 1;
 		}
 	nav  ul
 		{
@@ -113,17 +190,17 @@
 		{
 			font-size: 25px;
 			text-align: center;
-			color: white;
+			color: #FFFFFF;
 			padding: 16px;
 			text-decoration: none;
 		}
 
 	nav li a:hover
 		{
-			background-color: #111;
+			background-color: #111111;
 		}
 	
-	/* start indexpage */
+/* start indexpage */
 	
 	#IntoVideo
 		{
@@ -231,6 +308,7 @@
 			order: 6;
 			grid-column:1/ span 2;
 			grid-row:14/ span 2;
+			flex-basis:100%;
 		}
 		
 	#CookieStatement
@@ -270,75 +348,220 @@
 			padding: 1em;
 		}
 	
-	/* start product page */
-	#ProductSection
+/* start product page */
+	#ProductPage article
 		{
 			padding:8px;
 		}
 	
 	#GlobalStory
 		{
+			grid-area: ArtOne;
 			grid-column:2/ span 1;
 			grid-row:5/ span 6;
 		}
 		
 	#ProblemSolver
 		{
+			grid-area: ArtTwo;
 			grid-column:1/ span 1;
 			grid-row:5/ span 2;
 		}
 		
 	#HowToUse
 		{
+			grid-area: ArtThree;
 			grid-column:3/ span 1;
 			grid-row:5/ span 3;
 		}
 		
 	#WhoUses
 		{
+			grid-area: ArtFour;
 			grid-column:3/ span 1;
 			grid-row:8/ span 3;
 		}
 		
 	#WhatToExpect
 		{
+			grid-area: ArtFive;
 			grid-column:1/ span 1;
 			grid-row:7/ span 5;
 		}
 		
 	#TheFuture
 		{
+			grid-area: ArtSix;
 			grid-column:2/ span 2;
 			grid-row:11/ span 1;
 		}
 		
 	#CameraOne
 	{
+		grid-area: PicOne;
 		grid-column:1/ span 1;
 		grid-row:12/ span 2;
 	}
 	
 	#CameraTwo
 	{
-		grid-column:2/ span 2;
+		grid-area: PicTwo;
+		grid-column:2/ span 1;
 		grid-row:12/ span 2;
 	}
 	
 	#CameraThree
 	{
-		grid-column:2/ span 2;
+		grid-area: PicThree;
+		grid-column:3/ span 1;
 		grid-row:12/ span 2;
+		
 	}
 		
-	#ProductSection header
+	#ProductPage article header
 		{
 			text-align: center;
 			font-size: 20px;
 		}
+	#ProductPage article p
+		{
+			text-align: center;
+		}
+/* start pricing page */
+	
+	#PricingPage #GlobalStory
+	{
+		order:3;
+		padding:8px;
+	}
+
+	#PricingPage #GlobalStory header
+	{
+		text-align: center;
+		font-size: 20px;
+	}
+	
+	#PricingPage #GlobalStory p
+	{
+		text-align: center;
+	}
+	
+	#PricingPage section
+	{
+		padding:8px;
+		order: 4;
+		flex-basis:100%;
+		display:flex;
+		flex-wrap:wrap;
+	}
+	
+	#PricingPage section h6
+	{
+		order:1;
+		flex-basis:100%
+	}
+	
+	#PricingPage section table
+	{
+		order: 2;
+		flex-basis:60%;
+		padding:5px;
+	}
+	
+	#PricingPage section th
+	{
+		background-color:#AA336A;
+		color:	#ADD8E6;
+	}
+	
+	#PricingPage section table td:first-child
+	{
+		background-color:#FF0;
+	}
+	
+	#PricingPage section table tr:nth-child(1n+1)
+	{
+		background-color:#CFF;
+	}
+	
+	#PricingPage section table tr:nth-child(2n+1)
+	{
+		background-color:#FFF;
+	}
+	
+	#PricingPage aside
+	{	
+		order: 3;
+		flex-basis:40%;
+		display:grid;
+	}
+	
+	#PricingPage section footer
+	{
+		order: 4;
+		flex-basis:60%;
+		text-align:right;
+	}
+/* start contact page*/
+	#ContactPage article
+	{
+		padding:18px;
+		order: 3;
+		flex-basis:100%
+	}
+	
+	#ContactPage form
+	{
+		order: 4;
+		flex-basis:60%;
+		flex-grow:2;
+		flex-shrink:0;
+	}
+	
+	#ContactPage aside
+	{
+		order: 5;
+		flex-basis:1%;
+		display: grid;
+		flex-grow:1;
+	}
+	#ContactPage input
+	{
+		width:50%;
+	}
+	#ContactPage textarea 
+	{
+	  width: 150%;
+	  height: 50%;
+	  box-sizing: border-box;
+	  resize: none;
+	}
 }
 
 @media screen and (min-width:481px) and (max-width: 1279px)
 {
+	#ProductPage
+		{
+			display: grid;
+			grid-template-columns: 50% 50%;
+			grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+			grid-template-areas:
+				"header header"
+				"header header"
+				"nav nav"
+				"ArtOne ArtTwo"
+				"ArtOne ArtTwo"
+				"ArtThree ArtTwo"
+				"ArtThree ArtFive"
+				"ArtThree ArtFive"
+				"ArtThree ArtFive"
+				"ArtSix ArtSix"
+				"ArtSix ArtSix"
+				"PicOne PicTwo"
+				"PicOne PicTwo"
+				"AutorInfo Cookie"
+				"AutorInfo Cookie"
+		}
 	#dropdown
 		{
 			display: none;
@@ -354,6 +577,9 @@
 			flex-basis: 100%;
 			padding: 20px;
 			order: 1;
+			grid-area: header;
+			grid-column:1/ span 2;
+			grid-row:1/span 3;
 		}
 		
 	nav
@@ -362,6 +588,9 @@
 			padding: 1em;
 			order: 2;
 			background-color: #333333;
+			grid-area: nav;
+			grid-column:1/ span 2;
+			grid-row:4/span 1;
 		}
 	nav  ul
 		{
@@ -480,7 +709,7 @@
 			flex-basis:60%;
 		}
 	
-	aside
+	#IndexPage aside
 		{
 			flex-grow:1;
 			order: 3;
@@ -489,6 +718,9 @@
 	#AuthorInfo
 		{
 			order: 6;
+			grid-column:1/ span 2;
+			grid-row:15/ span 2;
+			flex-basis:100%;
 		}
 		
 	#CookieStatement
@@ -518,19 +750,229 @@
 			float: right;
 		}
 	
-	p 
+	#IndexPage p 
 		{
 			padding: 1em;
 		}
 		
-	header
+	#IndexPage header
 		{
 			padding: 1em;
 		}
+	/* start product page */
+	#ProductPage article
+		{
+			padding:8px;
+		}
+	
+	#GlobalStory
+		{
+			grid-area: ArtOne;
+			grid-column:1/ span 1;
+			grid-row:5/ span 2;
+		}
+		
+	#ProblemSolver
+		{
+			grid-area: ArtTwo;
+			grid-column:2/ span 1;
+			grid-row:5/ span 4;
+		}
+		
+	#HowToUse
+		{
+			grid-area: ArtThree;
+			grid-column:1/ span 1;
+			grid-row:7/ span 4;
+		}
+		
+	#WhoUses
+		{
+			grid-area: ArtFour;
+			display: none;
+		}
+		
+	#WhatToExpect
+		{
+			grid-area: ArtFive;
+			grid-column:2/ span 1;
+			grid-row:9/ span 2;
+		}
+		
+	#TheFuture
+		{
+			grid-area: ArtSix;
+			grid-column:1/ span 2;
+			grid-row:11/ span 2;
+		}
+		
+	#ProductPage #CameraOne
+	{
+		grid-area: PicOne;
+		grid-column:1/ span 1;
+		grid-row:13/ span 2;
+	}
+	
+	#ProductPage #CameraTwo
+	{
+		grid-area: PicTwo;
+		grid-column:2/ span 1;
+		grid-row:13/ span 2;
+	}
+	
+	#ProductPage #CameraThree
+	{
+		grid-area: PicThree;
+		display: none;
+	}
+		
+	#ProductPage article header
+		{
+			text-align: center;
+			font-size: 20px;
+		}
+	#ProductPage article p
+		{
+			text-align: center;
+		}
+/* start pricing page */
+	
+	#PricingPage #GlobalStory
+	{
+		order:3;
+		padding:8px;
+	}
+
+	#PricingPage #GlobalStory header
+	{
+		text-align: center;
+		font-size: 20px;
+	}
+	
+	#PricingPage #GlobalStory p
+	{
+		text-align: center;
+	}
+	
+	#PricingPage section
+	{
+		padding:8px;
+		order: 4;
+		flex-basis:100%;
+		display:flex;
+		flex-wrap:wrap;
+	}
+	
+	#PricingPage section table
+	{
+		order: 1;
+		flex-basis:100%;
+		padding:5px;
+	}
+	
+	#PricingPage section th
+	{
+		background-color:#AA336A;
+		color:	#FFFFFF;
+	}
+	#PricingPage section table td:first-child
+	{
+		background-color:#FF0;
+	}
+	
+	#PricingPage section table tr:nth-child(1n+1)
+	{
+		background-color:#CFF;
+	}
+	
+	#PricingPage section table tr:nth-child(2n+1)
+	{
+		background-color:#FFF;
+	}
+	
+	
+	#PricingPage aside
+	{	
+		order: 3;
+		flex-basis:100%;
+	}
+	
+	#PricingPage aside #CameraOne
+	{	
+		display:none;
+	}
+	
+	#PricingPage section footer
+	{
+		order: 2;
+		flex-basis:100%;
+		text-align:right;
+	}
+/*start contact page*/	
+	#ContactPage article
+	{
+		padding:18px;
+		order: 3;
+		flex-basis:100%
+	}
+	
+	#ContactPage form
+	{
+		order: 4;
+		flex-basis:60%;
+		flex-grow:2;
+		flex-shrink:0;
+	}
+	
+	#ContactPage aside
+	{
+		order: 5;
+		flex-basis:1%;
+		display: grid;
+		flex-grow:1;
+	}
+	#ContactPage input
+	{
+		width:50%;
+	}
+	#ContactPage textarea 
+	{
+	  width: 150%;
+	  height: 50%;
+	  box-sizing: border-box;
+	  resize: none;
+	}
 }
 
 @media screen and (max-width: 480px)
 {
+	#ProductPage
+		{
+			display: grid;
+			grid-template-columns: 50% 50%;
+			grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+			grid-template-areas:
+				"header nav"
+				"header nav"
+				"ArtFive ArtFive"
+				"ArtFive ArtFive"
+				"ArtFive ArtFive"
+				"ArtThree ArtThree"
+				"ArtThree ArtThree"
+				"ArtThree ArtThree"
+				"ArtTwo ArtTwo"
+				"ArtTwo ArtTwo"
+				"ArtTwo ArtTwo"
+				"ArtOne ArtOne"
+				"ArtOne ArtOne"
+				"ArtOne ArtOne"
+				"PicOne PicOne"
+				"PicOne PicOne"
+				"PicTwo PicTwo"
+				"PicThree PicThree"
+				"AutorInfo Cookie"
+				"AutorInfo Cookie"
+		}
 	
 	#logo
 		{
@@ -544,6 +986,9 @@
 			flex-grow:1;
 			background-color: black;
 			color:white;
+			grid-area: nav;
+			grid-column:2/ span 1;
+			grid-row:1/span 2;
 		}
 		
 	#ProductPage nav
@@ -572,6 +1017,9 @@
 			flex-basis: 45%;
 			padding: 20px;
 			order: 2;
+			grid-area: header;
+			grid-column:1/ span 1;
+			grid-row:1/span 2;
 		}
 	#InformationMenu h1
 		{
@@ -673,7 +1121,7 @@
 			flex-basis:60%;
 		}
 	
-	aside
+	#IndexPage aside
 		{
 			flex-basis: 100%;
 			order: 4;
@@ -682,6 +1130,9 @@
 	#AuthorInfo
 		{
 			order: 6;
+			grid-column: 1 / span 1;
+			grid-row: 19/ span 2;
+			flex-basis:100%;
 		}
 		
 	#CookieStatement
@@ -711,13 +1162,179 @@
 			float: right;
 		}
 	
-	p 
+	#IndexPage p 
 		{
 			padding: 1em;
 		}
 		
-	header
+	#IndexPage header
 		{
 			padding: 1em;
 		}
+	
+	/* start product page */
+	#ProductPage article
+		{
+			padding:8px;
+		}
+	
+	#GlobalStory
+		{
+			grid-area: ArtOne;
+			grid-column:1/ span 2;
+			grid-row:12/ span 3;
+		}
+		
+	#ProblemSolver
+		{
+			grid-area: ArtTwo;
+			grid-column:1/ span 2;
+			grid-row:9/ span 3;
+		}
+		
+	#HowToUse
+		{
+			grid-area: ArtThree;
+			grid-column:1/ span 2;
+			grid-row:6/ span 3;
+		}
+		
+	#WhoUses
+		{
+			grid-area: ArtFour;
+			display: none;
+		}
+		
+	#WhatToExpect
+		{
+			grid-area: ArtFive;
+			grid-column:1/ span 2;
+			grid-row:3/ span 3;
+		}
+		
+	#TheFuture
+		{
+			grid-area: ArtSix;
+			Display: None;
+		}
+		
+	#CameraOne
+	{
+		grid-area: PicOne;
+		grid-column:1/ span 1;
+		grid-row:15/ span 2;
+	}
+	
+	#CameraTwo
+	{
+		grid-area: PicTwo;
+		grid-column:1/ span 2;
+		grid-row:17/ span 1;
+	}
+	
+	#CameraThree
+	{
+		grid-area: PicThree;
+		grid-column:1/ span 2;
+		grid-row:18/ span 1;
+	}
+		
+	#ProductPage article header
+		{
+			text-align: center;
+			font-size: 20px;
+		}
+	#ProductPage article p
+		{
+			text-align: center;
+		}
+/* start pricing page */
+	
+	#PricingPage #GlobalStory
+	{
+		display: none;
+	}
+	
+	#PricingPage section
+	{
+		order: 4;
+		flex-basis:100%;
+		display:flex;
+		flex-wrap:wrap;
+	}
+	
+	#PricingPage section table
+	{
+		order: 1;
+		flex-basis:90%;
+	}
+	
+	#PricingPage section th
+	{
+		background-color:#AA336A;
+		color:	#FFFFFF;
+	}
+	#PricingPage section table td:first-child
+	{
+		background-color:#FF0;
+	}
+	
+	#PricingPage section table tr:nth-child(1n+1)
+	{
+		background-color:#CFF;
+	}
+	
+	#PricingPage section table tr:nth-child(2n+1)
+	{
+		background-color:#FFF;
+	}
+	
+	
+	#PricingPage aside
+	{	
+		order: 3;
+		flex-basis:90%;
+		display:grid;
+	}
+	
+	#PricingPage section footer
+	{
+		order: 2;
+		flex-basis:98%;
+		text-align:right;
+	}
+/*start contact page*/	
+	#ContactPage article
+	{
+		padding:18px;
+		order: 3;
+		flex-basis:100%
+	}
+	
+	#ContactPage form
+	{
+		order: 4;
+		flex-basis:100%;
+		flex-grow:2;
+		flex-shrink:0;
+	}
+	
+	#ContactPage aside
+	{
+		order: 5;
+		flex-basis:1%;
+		display: grid;
+		flex-grow:1;
+	}
+	#ContactPage input
+	{
+		width:50%;
+	}
+	#ContactPage textarea 
+	{
+	  width: 100%;
+	  height: 50%;
+	  box-sizing: border-box;
+	  resize: none;
+	}
 }

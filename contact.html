@@ -4,8 +4,8 @@
 	<head>
 		<meta charset = "utf-8"/>
 			
-		<meta name = "keywords" content = "Sporttechnologie, Sport, Selling sportproducts"/>
-		<meta name = "discription" content = "Information about the sporttechnolgie we sell."/>
+		<meta name = "keywords" content = "Sporttechnologie, Sport, Selling sportproducts, Information, Inventions"/>
+		<meta name = "discription" content = "Information about the sport Technolgie is what we give to you."/>
 		<meta name = "author" content = "Mieke Fraters"/>
 		
 		<link
@@ -14,12 +14,147 @@
 			href = "css/stylesheet.css"
 		/>
 		
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/fav/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/fav/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/fav/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/fav/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/fav/apple-touch-icon-60x60.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/fav/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/fav/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/fav/apple-touch-icon-152x152.png" />
+		<link rel="icon" type="image/png" href="img/fav/favicon-196x196.png" sizes="196x196" />
+		<link rel="icon" type="image/png" href="img/fav/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" type="image/png" href="img/fav/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="img/fav/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="img/fav/favicon-128.png" sizes="128x128" />
+		
 		<title> Sporttechnologie </title>
 	</head>
 	
-	<body>
+	<body id = "ContactPage">
+		<header id = "InformationMenu">
+			<img
+				id = "logo"
+				alt = "logo"
+				src = "img/svg/Logo.svg"
+			/>
+			<h1>
+				Glitched technologies
+			</h1>
+			<h2>
+				Coding your future
+			</h2>
+		</header>
+		
+		<nav>
+			<label for="hamburger-menu" id = "dropdown">
+				&#x2630;
+			</label>
+				
+			<input type="checkbox" id="hamburger-menu">
+				
+			<ul>
+				<li>
+					<a href = "index.html">Homepage</a>
+				</li>
+				<li>
+					<a href = "product.html">Our products</a>
+				</li>
+				<li>
+					<a href = "pricing.html">The prices</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<article>
+			<h2>Contact us</h2>
+			<p>
+				If <strong>you</strong> contact us we are not reliable for any of the consequences&#46;
+				It will take around 5 years for us to come back to <strong>your</strong> question&#44; but please believe we are trying our best&#46;
+				Fill in the form below to get <strong>your</strong> question to us&#46;
+			</p>
+		</article>
+		
+		
+		<form
+			action = "vote.php"
+			method = "post"
+			>
+			<fieldset>
+				<legend>Leave us a question</legend>
+					<table>
+						<tr>
+							<td>
+								<label for="VisitorName">Enter your name*:</label>
+								<input type="text" id="VisitorName" name="Name" required>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="Email">Enter your email*:</label>
+								<input type="Email" id="Email" name="Email" required>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label for="Message">Type your question*: </label>
+								<textarea placeholder="Ask your question here" id="Message" name="Message" required></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="submit" value="Submit">
+							</td>
+						</tr>
+					</table>
+			</fieldset>
+		</form>
+		<aside>
+			<a href = "https://www.inholland.nl/">
+				<figure>
+					<img
+						id = "CameraOne"
+						class = "ProductPictures"
+						src = "img/Camera.jpg" 
+						alt = "It is a picture of a camera meant for photofinish photo's."
+						title = "PHOTO: timing.microgate.it PHOTOFINISH - ETHERLYNX VISION PRO "
+					>	
+					<figcaption>It is a picture of a camera meant for photofinish photo&#39;s</figcaption>
+				</figure>
+			</a>
+			<a href = "https://www.inholland.nl/">
+				<figure>
+					<img
+						id = "CameraTwo"
+						class = "ProductPictures"
+						src = "img/Camera.jpg" 
+						alt = "It is a picture of a camera meant for photofinish photo's."
+						title = "PHOTO: timing.microgate.it PHOTOFINISH - ETHERLYNX VISION PRO "
+					>	
+					<figcaption>It is a picture of a camera meant for photofinish photo&#39;s</figcaption>
+				</figure>
+			</a>
+			<a href = "https://www.inholland.nl/">
+				<figure>
+					<img
+						id = "CameraThree"
+						class = "ProductPictures"
+						src = "img/Camera.jpg" 
+						alt = "It is a picture of a camera meant for photofinish photo's."
+						title = "PHOTO: timing.microgate.it PHOTOFINISH - ETHERLYNX VISION PRO "
+					>
+					<figcaption>It is a picture of a camera meant for photofinish photo&#39;s</figcaption>
+				</figure>						
+			</a>
+		</aside>
 	
-	
+		<section id = "CookieStatement">
+			<h5>Cookie Statement</h5>
+		</section>
+		
+		<footer id = "AuthorInfo">
+			&#169; 2022 Mieke Fraters
+		</footer>
 	
 	</body>
 </html>
