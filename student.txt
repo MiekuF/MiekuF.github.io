@@ -1,7 +1,5 @@
 Student name: Mieke Fraters
 Student number: 696049
 Student class: INF1B
-URL student GitHub website: 
-https://username.github.io )
-URL student GitHub repository: your GitHub URL (looks like 
-https://github.com/username/repositoryname )
+URL student GitHub website: MiekuF.github.io 
+URL student GitHub repository: https://github.com/MiekuF/MiekuF.github.io
