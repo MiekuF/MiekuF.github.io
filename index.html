@@ -18,7 +18,7 @@
 	</head>
 	
 	<body id = "IndexPage">
-		<header>
+		<header id = "InformationMenu">
 			<img
 				id = "logo"
 				src = "img/svg/Logo.svg"
@@ -32,27 +32,33 @@
 		</header>
 		
 		<nav>
-			<ul>
-				<li>
-					<a href = "product.html">Our products</a>
-				</li>
-				<li>
-					<a href = "pricing.html">The prices</a>
-				</li>
-				<li>
-					<a href = "contact.html">Contact us</a>
-				</li>
-			</ul>
+				<label for="hamburger-menu" id = "dropdown">
+					&#x2630
+				</label>
+				
+				<input type="checkbox" id="hamburger-menu">
+				
+				<ul>
+					<li>
+						<a href = "product.html">Our products</a>
+					</li>
+					<li>
+						<a href = "pricing.html">The prices</a>
+					</li>
+					<li>
+						<a href = "contact.html">Contact us</a>
+					</li>
+				</ul>
 		</nav>
 		
-		<video autoplay muted >
+		<video id = "IntoVideo" autoplay muted >
 		<source src="video/SportTech.mp4" type="video/mp4">
 		<source src="video/SportTech.ogg" type="video/ogv">
 		Your browser does not support the video tag.
 		</video>
 		
-		<section>
-			<article>
+		<section id = "IndexArticles">
+			<article id ="articleOne">
 				<header>
 					Less counting when bowling 
 				</header>
@@ -68,17 +74,13 @@
 							class = "IndexPictures"
 							src = "img/BowlingLane.png" 
 							alt = "A picture of a bowling ball on a bowling lane."
-							title = "The bowlingball"
+							title = "PHOTO: PRASIT PHOTO / GETTY IIMAGES"
 						>
 					</a>
-					
-					<p class = "copyright">
-						PHOTO: PRASIT PHOTO / GETTY IIMAGES 
-					</p>
 				</footer>
 			</article>
 		
-			<article>
+			<article id ="articleTwo">
 				<header>
 					Less debating over the true winner 
 				</header>
@@ -93,17 +95,13 @@
 							class = "IndexPictures"
 							src = "img/RunningPhoto.png" 
 							alt = "A picture of runners running a race and being tracked by lines on where they are."
-							title = "The runners"
+							title = "PHOTO: Sprinttimer.se"
 						>
 					</a>
-					
-					<p class = "copyright">
-						PHOTO: Sprinttimer.se
-					</p>
 				</footer>
 			</article>
 		
-			<article>
+			<article id ="articleThree">
 				<header>
 					No more fighting over unknown truths 
 				</header>
@@ -120,13 +118,9 @@
 							class = "IndexPictures"
 							src = "img/InstantReplay.png" 
 							alt = "A picture of a referee looking into an instant replay machine."
-							title = "The referee"
+							title = "PHOTO: upperhand.com "
 						>
 					</a>
-					
-					<p class = "copyright">
-						PHOTO: upperhand.com 
-					</p>
 				</footer>
 			</article>
 		</section>
@@ -155,7 +149,7 @@
 			 Cookie Statement
 		</section>
 		
-		<footer>
+		<footer id = "AuthorInfo">
 			&#169; 2022 Mieke Fraters
 		</footer>
 		

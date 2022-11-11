@@ -1,28 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+#logo
+	{
+		height: 50px;
+		width: 50px;
+	}
+
+#IndexPage
+	{
+		background-color: pink;
+		font-family: Silkscreen;
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0;
+	}
+
+#ProductPage
+	{
+		background-color: pink;
+		font-family: Silkscreen;
+		display: grid;
+		margin: 0;
+	}
+
+
+#InformationMenu
+	{
+		background-color: black;
+		color: white;
+	}	
+	
+#InformationMenu h2
+	{
+		font-size: 12px;
+	}
+
+#IntoVideo
+	{
+		flex-basis: 100%;
+	}
+	
+#CookieStatement
+	{
+		bottom: 0;
+		right: 0;
+		color: #FFF;
+		position: fixed;
+		background-color: #FA0;
+		opacity: 50%;
+	}
+
+.IndexPictures
+	{
+		padding: 8px;
+		max-width: 100%;
+		height: auto;
+	}
+
 @media screen and (min-width: 1280px)
 {
-	#logo
-	{
-		height: 150px;
-		width: 150px;
-	}
-	.IndexPage
-	{
-		display: flex;
-	}
+	#ProductPage
+		{
+			display: grid;
+			grid-template-columns: auto auto auto;
+		}
+	#dropdown
+		{
+			display: none;
+		}
+		
+	#hamburger-menu
+		{
+			display: none;
+		}
+	
+	#InformationMenu
+		{
+			flex-basis: 100%;
+			padding: 20px;
+			order: 1;
+			grid-column:1/ span 1;
+		}
+		
+	nav
+		{
+			flex-basis: 100%;
+			padding: 1em;
+			order: 2;
+			background-color: #333333;
+		}
+	nav  ul
+		{
+			list-style-type: none;
+			overflow: hidden;
+		}
+
+	nav  li 
+		{
+			float: left;
+		}
+
+	nav li a
+		{
+			font-size: 25px;
+			text-align: center;
+			color: white;
+			padding: 16px;
+			text-decoration: none;
+		}
+
+	nav li a:hover
+		{
+			background-color: #111;
+		}
+	
+	/* start indexpage */
+	
+	#IntoVideo
+		{
+			order: 3;
+		}
+		
+	#IndexArticles
+		{
+			order: 4;
+			
+			flex:60%;
+			flex-grow:1;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+		
+	#articleOne
+		{
+			flex-basis:100%;
+			order:1;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+	#articleOne header
+		{	
+			order:1;
+			flex-basis:100%;
+			text-align: center;
+		}
+	#articleOne p
+		{	
+			order:2;
+			flex-grow: 1;
+		}
+	#articleOne footer
+		{
+			order:3;
+			flex-basis:60%;
+		}
+	
+	#articleTwo
+		{
+			flex-basis:100%;
+			order:2;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+	#articleTwo header
+		{	
+			order:1;
+			flex-basis:100%;
+			text-align: center;
+		}
+	#articleTwo p
+		{	
+			order:2;
+			flex-grow: 1;
+		}
+	#articleTwo footer
+		{
+			order:3;
+			flex-basis:60%;
+		}
+	
+	#articleThree
+		{
+			flex-basis:100%;
+			order:3;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+	#articleThree header
+		{	
+			order:1;
+			flex-basis:100%;
+			text-align: center;
+		}
+	#articleThree p
+		{	
+			order:2;
+			flex-grow: 1;
+		}
+	#articleThree footer
+		{
+			order:3;
+			flex-basis:60%;
+		}
+	
+	aside
+		{
+			flex-basis: 25%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			order: 5;
+		}
+	
+	#AuthorInfo
+		{
+			order: 6;
+		}
+		
+	#CookieStatement
+		{
+			order: 7;
+		}
+	
+	#IndexArticles header
+		{
+			font-size:20px;
+		}
+
+	#IndexPage article p
+		{	
+			width: 33%;
+			text-align: center;
+		}
+
+	#IndexPage article footer
+		{
+			float: right;
+		}
+
+	#IndexPage aside
+		{
+			flex-basis: 33%;
+			float: right;
+		}
+	
+	#IndexPage p 
+		{
+			padding: 1em;
+		}
+		
+	#IndexPage header
+		{
+			padding: 1em;
+		}
+	
 }
 
 @media screen and (min-width:481px) and (max-width: 1279px)
 {
-	.IndexPage
+	#dropdown
+		{
+			display: none;
+		}
+	
+	#hamburger-menu
 	{
-		display: flex;
+		display: none;
 	}
+	
+	#InformationMenu
+		{
+			flex-basis: 100%;
+			padding: 20px;
+			order: 1;
+		}
+		
+	nav
+		{
+			flex-basis: 100%;
+			padding: 1em;
+			order: 2;
+			background-color: #333333;
+		}
+	nav  ul
+		{
+			list-style-type: none;
+			overflow: hidden;
+		}
+
+	nav  li 
+		{
+			float: left;
+		}
+
+	nav li a
+		{
+			font-size: 25px;
+			text-align: center;
+			color: white;
+			padding: 16px;
+			text-decoration: none;
+		}
+
+	nav li a:hover
+		{
+			background-color: #111;
+		}
+	
+	/* start indexpage */
+	
+	#IntoVideo
+		{
+			order: 4;
+		}
+		
+	#IndexArticles
+		{
+			order: 5;
+			
+			flex-basis:100%;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+		
+	#articleOne
+		{
+			flex-basis:100%;
+			order:3;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+	#articleOne header
+		{	
+			order:1;
+			flex-basis:100%;
+			text-align: center;
+		}
+	#articleOne p
+		{	
+			order:3;
+			flex-grow: 1;
+		}
+	#articleOne footer
+		{
+			order:2;
+			flex-basis:60%;
+		}
+	
+	#articleTwo
+		{
+			flex-basis:100%;
+			order:2;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+	#articleTwo header
+		{	
+			order:1;
+			flex-basis:100%;
+			text-align: center;
+		}
+	#articleTwo p
+		{	
+			order:3;
+			flex-grow: 1;
+		}
+	#articleTwo footer
+		{
+			order:2;
+			flex-basis:60%;
+		}
+	
+	#articleThree
+		{
+			flex-basis:100%;
+			order:1;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+	#articleThree header
+		{	
+			order:1;
+			flex-basis:100%;
+			text-align: center;
+		}
+	#articleThree p
+		{	
+			order:3;
+			flex-grow: 1;
+		}
+	#articleThree footer
+		{
+			order:2;
+			flex-basis:60%;
+		}
+	
+	aside
+		{
+			flex-grow:1;
+			order: 3;
+		}
+		
+	#AuthorInfo
+		{
+			order: 6;
+		}
+		
+	#CookieStatement
+		{
+			order: 7;
+		}
+	
+	#IndexArticles header
+		{
+			font-size:20px;
+		}
+
+	#IndexPage article p
+		{	
+			width: 33%;
+			text-align: center;
+		}
+
+	#IndexPage article footer
+		{
+			float: right;
+		}
+
+	#IndexPage aside
+		{
+			flex-basis: 33%;
+			float: right;
+		}
+	
+	p 
+		{
+			padding: 1em;
+		}
+		
+	header
+		{
+			padding: 1em;
+		}
 }
 
 @media screen and (max-width: 480px)
 {
-	.IndexPage
-	{
-		display: flex;
-	}
+	
+	#logo
+		{
+			display: none;
+		}
+	
+	/* Hamburgermenu */
+	nav 
+		{
+			order:2;
+			flex-grow:1;
+			background-color: black;
+			color:white;
+		}
+		
+	#ProductPage nav
+		{
+			padding:8px;
+		}
+	
+	#hamburger-menu
+		{
+			visibility:hidden;
+		}
+	
+	#hamburger-menu:checked ~ ul
+		{
+			display: block;
+		}
+	nav ul
+		{
+			display:none;
+		}
+		
+	/* start indexpage */
+		
+	#InformationMenu
+		{
+			flex-basis: 45%;
+			padding: 20px;
+			order: 2;
+		}
+	#InformationMenu h1
+		{
+			font-size:20px;
+		}	
+		
+	#InformationMenu h2
+		{
+			font-size:15px;
+		}
+	
+	#IntoVideo
+		{
+			display: none;
+		}
+		
+	#IndexArticles
+		{
+			order: 5;
+			
+			flex-basis:100%;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+		
+	#articleOne
+		{
+			flex-basis:100%;
+			order:3;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+	#articleOne header
+		{	
+			order:1;
+			flex-basis:100%;
+			text-align: center;
+		}
+	#articleOne p
+		{	
+			order:2;
+			flex-grow: 1;
+		}
+	#articleOne footer
+		{
+			order:3;
+			flex-basis:60%;
+		}
+	
+	#articleTwo
+		{
+			flex-basis:100%;
+			order:2;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+	#articleTwo header
+		{	
+			order:1;
+			flex-basis:100%;
+			text-align: center;
+		}
+	#articleTwo p
+		{	
+			order:2;
+			flex-grow: 1;
+		}
+	#articleTwo footer
+		{
+			order:3;
+			flex-basis:60%;
+		}
+	
+	#articleThree
+		{
+			flex-basis:100%;
+			order:1;
+			
+			display: flex;
+			flex-flow: row wrap;
+		}
+	#articleThree header
+		{	
+			order:1;
+			flex-basis:100%;
+			text-align: center;
+		}
+	#articleThree p
+		{	
+			order:2;
+			flex-grow: 1;
+		}
+	#articleThree footer
+		{
+			order:3;
+			flex-basis:60%;
+		}
+	
+	aside
+		{
+			flex-basis: 100%;
+			order: 4;
+		}
+		
+	#AuthorInfo
+		{
+			order: 6;
+		}
+		
+	#CookieStatement
+		{
+			order: 7;
+		}
+	
+	#IndexArticles header
+		{
+			font-size:20px;
+		}
+
+	#IndexPage article p
+		{	
+			width: 33%;
+			text-align: center;
+		}
+
+	#IndexPage article footer
+		{
+			float: right;
+		}
+
+	#IndexPage aside
+		{
+			flex-basis: 33%;
+			float: right;
+		}
+	
+	p 
+		{
+			padding: 1em;
+		}
+		
+	header
+		{
+			padding: 1em;
+		}
 }
