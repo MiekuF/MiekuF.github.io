@@ -21,6 +21,7 @@
 		font-family: Silkscreen;
 		display: grid;
 		margin: 0;
+		
 	}
 
 
@@ -49,6 +50,12 @@
 		background-color: #FA0;
 		opacity: 50%;
 	}
+.ProductPictures
+	{
+		padding: 8px;
+		max-width: 100%;
+		height: auto;
+	}
 
 .IndexPictures
 	{
@@ -62,7 +69,8 @@
 	#ProductPage
 		{
 			display: grid;
-			grid-template-columns: auto auto auto;
+			grid-template-columns: 33% 33% 33%;
+			grid-template-rows: 15;
 		}
 	#dropdown
 		{
@@ -79,7 +87,7 @@
 			flex-basis: 100%;
 			padding: 20px;
 			order: 1;
-			grid-column:1/ span 1;
+			grid-column:1/ span 3;
 		}
 		
 	nav
@@ -88,6 +96,7 @@
 			padding: 1em;
 			order: 2;
 			background-color: #333333;
+			grid-column:1/ span 3;
 		}
 	nav  ul
 		{
@@ -207,7 +216,7 @@
 			flex-basis:60%;
 		}
 	
-	aside
+	#IndexPage aside
 		{
 			flex-basis: 25%;
 			display: flex;
@@ -220,6 +229,8 @@
 	#AuthorInfo
 		{
 			order: 6;
+			grid-column:1/ span 2;
+			grid-row:14/ span 2;
 		}
 		
 	#CookieStatement
@@ -259,6 +270,71 @@
 			padding: 1em;
 		}
 	
+	/* start product page */
+	#ProductSection
+		{
+			padding:8px;
+		}
+	
+	#GlobalStory
+		{
+			grid-column:2/ span 1;
+			grid-row:5/ span 6;
+		}
+		
+	#ProblemSolver
+		{
+			grid-column:1/ span 1;
+			grid-row:5/ span 2;
+		}
+		
+	#HowToUse
+		{
+			grid-column:3/ span 1;
+			grid-row:5/ span 3;
+		}
+		
+	#WhoUses
+		{
+			grid-column:3/ span 1;
+			grid-row:8/ span 3;
+		}
+		
+	#WhatToExpect
+		{
+			grid-column:1/ span 1;
+			grid-row:7/ span 5;
+		}
+		
+	#TheFuture
+		{
+			grid-column:2/ span 2;
+			grid-row:11/ span 1;
+		}
+		
+	#CameraOne
+	{
+		grid-column:1/ span 1;
+		grid-row:12/ span 2;
+	}
+	
+	#CameraTwo
+	{
+		grid-column:2/ span 2;
+		grid-row:12/ span 2;
+	}
+	
+	#CameraThree
+	{
+		grid-column:2/ span 2;
+		grid-row:12/ span 2;
+	}
+		
+	#ProductSection header
+		{
+			text-align: center;
+			font-size: 20px;
+		}
 }
 
 @media screen and (min-width:481px) and (max-width: 1279px)
